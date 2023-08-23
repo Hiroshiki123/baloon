@@ -17,9 +17,21 @@ public class teletransport : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == ("parede"))
+        if(collision.gameObject.tag == ("paredeE"))
         {
-
+            transform.position = new Vector2(transform.position.x + 18, transform.position.y);
+        }
+        if (collision.gameObject.tag == ("paredeD"))
+        {
+            transform.position = new Vector2(transform.position.x + -18, transform.position.y);
+        }
+        if (collision.gameObject.tag == ("paredeI"))
+        {
+            transform.position = new Vector2(transform.position.x , transform.position.y+12);
+        }
+        if (collision.gameObject.tag == ("paredeS"))
+        {
+            transform.position = new Vector2(transform.position.x , transform.position.y-13);
         }
     }
 }
